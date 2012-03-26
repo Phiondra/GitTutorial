@@ -56,6 +56,9 @@
 		<li class="slide" id="tableofcontent-ssh-include">
 			<a href="#ssh-include">Einbinden eines SSH-Keys</a>
 		</li>
+		<li class="slide" id="tableofcontent-git-setup">
+			<a href="#git-setup">Informationen für Git einstellen</a>
+		</li>
 		<li class="slide" id="tableofcontent-repository-create">
 			<a href="#repository-create">Erstellen eines Repositorys</a>
 		</li>
@@ -168,9 +171,60 @@
 	</ol>
 </section>
 
+<section class="slide" id="git-setup">
+	<h2>Informationen für Git einstellen</h2>
+	<ul>
+		<li class="slide" id="git-setup-name">
+			Den Namen eingeben
+			<pre><code>git config --global user.name "Firstname Lastname"</code></pre>
+		</li>
+		<li class="slide" id="git-setup-name">
+			Die Mail-Adresse eingeben
+			<pre><code>git config --global user.email "your_email@youremail.com"</code></pre>
+		</li>
+	</ul>
+</section>
+
 <section class="slide" id="repository-create">
 	<h2>Repository</h2>
 	<h3>Erstellen eines Repositorys</h3>
+	<ul>
+		<li class="slide" id="repository-create-github">
+			GitHub - new Repository
+		</li>
+		<li class="slide" id="repository-create-description">
+			Name (Bsp: Hello-World) angeben, wenn gewünscht auch noch Beschreibung und Homepage
+		</li>
+		<li class="slide" id="repository-create-localdir">
+			Erstellen eines Verzeichnisses mit dem Namen des Repos und in dieses wechseln
+			<pre><code>mkdir ~/Hello-World
+cd ~/Hello-World</code></pre>
+		</li>
+		<li class="slide" id="repository-create-initialisieren">
+			Git initialisieren
+			<pre><code>git init</code></pre>
+		</li>
+		<li class="slide" id="repository-create-testfile">
+			README-File erstellen
+			<pre><code>touch README</code></pre>
+		</li>
+		<li class="slide" id="repository-create-add">
+			README-File für das Repository bereitstellen
+			<pre><code>git add README</code></pre>
+		</li>
+		<li class="slide" id="repository-create-commit">
+			Alle bereitgestellten Änderungen lokal hinzufügen (Nachricht ist "first commit")
+			<pre><code>git commit -m 'first commit'</code></pre>
+		</li>
+		<li class="slide" id="repository-create-addorigin">
+			Herkunft für das Repository hinzufügen (username ist Ihr Benutzernamen)
+			<pre><code>git remote add origin git@github.com:username/Hello-World.git</code></pre>
+		</li>
+		<li class="slide" id="repository-create-push">
+			Den Commit dem Richtigen Repository hinzufügen ("-u origin master" ist nur bei mehreren Branches nötig)
+			<pre><code>git push -u origin master</code></pre>
+		</li>
+	</ul>
 </section>
 
 <section class="slide" id="repository-change">
