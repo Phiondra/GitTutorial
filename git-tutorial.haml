@@ -1,0 +1,28 @@
+- require './helpers'
+!!!
+/[if lt IE 7] <html class="no-js ie6" lang="en">
+/[if IE 7] <html class="no-js ie7" lang="en">
+/[if IE 8] <html class="no-js ie8" lang="en">
+/ [if gt IE 8]><!
+%html.no-js{:lang => "en"}
+  / <![endif]
+  = render_file "head"
+  %body.deck-container
+    / Begin slides
+    %section#title-slide.slide
+      %h1 Git und GitHub
+      %h2 Mike Gerber und Nicolas Ganz
+    = render_file "slides/tableofcontents"
+    = render_file "slides/git"
+    = render_file "slides/distributed"
+    = render_file "slides/github"
+    = render_file "slides/installation"
+    = render_file "slides/ssh-create"
+    = render_file "slides/ssh-include"
+    = render_file "slides/git-setup"
+    = render_file "slides/repository-create"
+    = render_file "slides/repository-change"
+    = render_file "slides/repository-fork"
+    = render_file "slides/project"
+    = render_file "slides/questions"
+    = render_file "deckjsconfig"

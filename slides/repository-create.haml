@@ -1,0 +1,38 @@
+%section#repository-create.slide
+  %h2 Repository
+  %h3 Erstellen eines Repositorys
+  %ul
+    %li#repository-create-github.slide
+      GitHub - new Repository
+    %li#repository-create-description.slide
+      Name (Bsp: Hello-World) angeben, wenn gew&uuml;nscht auch noch Beschreibung und Homepage
+    %li#repository-create-localdir.slide
+      Erstellen eines Verzeichnisses mit dem Namen des Repos und in dieses wechseln
+      %pre
+        %code
+          :preserve
+            mkdir ~/Hello-World
+            cd ~/Hello-World        %li#repository-create-initialisieren.slide
+      Git initialisieren
+      %pre
+        %code git init
+    %li#repository-create-testfile.slide
+      README-File erstellen
+      %pre
+        %code touch README
+    %li#repository-create-add.slide
+      README-File f&uuml;r das Repository bereitstellen
+      %pre
+        %code git add README
+    %li#repository-create-commit.slide
+      Alle bereitgestellten &Auml;nderungen lokal hinzuf&uuml;gen (Nachricht ist "first commit")
+      %pre
+        %code git commit -m 'first commit'
+    %li#repository-create-addorigin.slide
+      Herkunft f&uuml;r das Repository hinzuf&uuml;gen (username ist Ihr Benutzernamen)
+      %pre
+        %code git remote add origin git@github.com:username/Hello-World.git
+    %li#repository-create-push.slide
+      Den Commit dem Richtigen Repository hinzuf&uuml;gen ("-u origin master" ist nur bei mehreren Branches n&ouml;tig)
+      %pre
+        %code git push -u origin master
