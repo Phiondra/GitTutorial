@@ -1,3 +1,19 @@
 %section#repository-fork.slide
   %h2 Repository
   %h3 Ein Repository forken
+  %ul
+    %li#fork-repo.slide
+      %img{:src => "images/fork-repo.jpg", :alt => "github Logo"}
+    %li#fork-repo.slide
+      %pre
+        %code git clone git@github.com:<strong>username</strong>/Spoon-Knife.git
+    %li#fork-repo-2.slide
+      %pre
+        %code
+          cd Spoon-Knife
+      %pre
+        %code
+          git remote add upstream git://github.com/octocat/Spoon-Knife.git
+      %pre
+        %code
+          git fetch upstream
