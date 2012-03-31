@@ -1,3 +1,20 @@
 %section#repository-change.slide
   %h2 Repository
   %h3 &Auml;ndern eines Repositorys
+  %ul
+    %li#repository-change-testfile.slide
+      README-File erstellen
+      %pre
+        %code touch README
+    %li#repository-change-add.slide
+      README-File f&uuml;r das Repository bereitstellen
+      %pre
+        %code git add README
+    %li#repository-change-commit.slide
+      Alle bereitgestellten &Auml;nderungen lokal hinzuf&uuml;gen (Nachricht ist "first commit")
+      %pre
+        %code git commit -m 'first commit'
+    %li#repository-change-push.slide
+      Den Commit dem Richtigen Repository hinzuf&uuml;gen ("-u origin master" ist nur bei mehreren Branches n&ouml;tig)
+      %pre
+        %code git push -u origin master
